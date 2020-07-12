@@ -1,5 +1,4 @@
 $(document).ready(function(){
-//cookies to save your preferences
 
 //Global Variables
 //Games
@@ -49,9 +48,9 @@ var s_arms = ['Min Min'];
 
 
 var fighters = ultimate;
-var favourites = [/*favouritesCookie*/];
+var favourites = [];
 var favourite_fighter = favourites;
-var deselected = [/*deselectedCookie*/];
+var deselected = [];
 
 
 //THIS RIGHT HERE CREATES A NEW LIST ITEM FOR EVERY CHARACTER
@@ -90,6 +89,8 @@ $('#load').click(function(){
 
 
 $('#random_btn').click(function() {
+    console.log(favourites);
+    console.log(deselected);
     //This gets rid of class "red"
     $('.fighter_name').removeClass("red");
     //Removes characters you hate
