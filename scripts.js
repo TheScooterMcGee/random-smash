@@ -278,12 +278,14 @@ $('#save').click(function(){
     console.log("Layout Saved");
 });
 $('#load').click(function(){
-    var favouritesCookie = Cookies.get("favourites".val);
-    var deselectedCookie = Cookies.get("deselected".val);
+    favouritesCookie = Cookies.get("favourites".val);
+    deselectedCookie = Cookies.get("deselected".val);
     favourites = [favouritesCookie];
     deselected = [deselectedCookie];
     console.log(favouritesCookie);
     console.log(deselectedCookie);
+    console.log(favourites);
+    console.log(deselected);
     console.log("Layout Loaded");
 });
 
