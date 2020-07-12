@@ -1,5 +1,7 @@
 $(document).ready(function(){
 //cookies to save your preferences
+var favouritesCookie = Cookies.get("favourites");
+var deselectedCookie = Cookies.get("deselected");
 
 //Global Variables
 //Games
@@ -49,9 +51,9 @@ var s_arms = ['Min Min'];
 
 
 var fighters = ultimate;
-var favourites = [];
+var favourites = [favouritesCookie];
 var favourite_fighter = favourites;
-var deselected = [];
+var deselected = [deselectedCookie];
 
 
 //THIS RIGHT HERE CREATES A NEW LIST ITEM FOR EVERY CHARACTER
