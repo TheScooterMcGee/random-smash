@@ -1,7 +1,10 @@
 $(document).ready(function(){
 //cookies to save your preferences
-var favouritesCookie = Cookies.get("favourites");
-var deselectedCookie = Cookies.get("deselected");
+var json_fav = Cookies.get("favourites");
+var json_des = Cookies.get("deselected");
+var favouritesCookie = JSON.parse(json_fav);
+var deselectedCookie = JSON.parse(json_fav);
+
 
 //Global Variables
 //Games
@@ -68,18 +71,21 @@ document.getElementById("fighter_list").innerHTML = str;
 
 
 $('#save').click(function(){
-    Cookies.set('deselected',deselected, {expires: 365});
-    Cookies.set('favourites',favourites, {expires: 365});
+    json_fav = JSON.stringify(favourites);
+    json_des = JSON.stringify(deselected);
+    Cookies.set('deselected',json_des, {expires: 365});
+    Cookies.set('favourites',json_fav, {expires: 365});
     console.log("Layout Saved");
 });
 $('#load').click(function(){
-    favouritesCookie = Cookies.get("favourites");
-    deselectedCookie = Cookies.get("deselected");
-    favourites = [favouritesCookie];
-    deselected = [deselectedCookie];
-    favourite_fighter = favourites;
+    json_fav = Cookies.get("favourites");
+    json_des = Cookies.get("deselected");
+    favouritesCookie = JSON.parse(json_fav);
+    deselectedCookie = JSON.parse(json_fav);
     console.log("Layout Loaded");
 });
+
+
 
 
 
