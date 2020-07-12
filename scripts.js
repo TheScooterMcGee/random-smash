@@ -278,8 +278,8 @@ $('#save').click(function(){
     console.log("Layout Saved");
 });
 $('#load').click(function(){
-    favouritesCookie = Cookies.get("favourites".val);
-    deselectedCookie = Cookies.get("deselected".val);
+    favouritesCookie = Cookies.get("favourites");
+    deselectedCookie = Cookies.get("deselected");
     favourites = [favouritesCookie];
     deselected = [deselectedCookie];
     console.log(favouritesCookie);
