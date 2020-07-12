@@ -67,7 +67,22 @@ document.getElementById("fighter_list").innerHTML = str;
 
 
 
-
+$('#save').click(function(){
+    Cookies.set('deselected',deselected, {expires: 365});
+    Cookies.set('favourites',favourites, {expires: 365});
+    console.log("Layout Saved");
+});
+$('#load').click(function(){
+    favouritesCookie = Cookies.get("favourites");
+    deselectedCookie = Cookies.get("deselected");
+    favourites = [favouritesCookie];
+    deselected = [deselectedCookie];
+    console.log(favouritesCookie);
+    console.log(deselectedCookie);
+    console.log(favourites);
+    console.log(deselected);
+    console.log("Layout Loaded");
+});
 
 
 
@@ -272,21 +287,6 @@ $('#DKTIME').click(function(){
     animate();
 });
 
-$('#save').click(function(){
-    Cookies.set('deselected',deselected, {expires: 365});
-    Cookies.set('favourites',favourites, {expires: 365});
-    console.log("Layout Saved");
-});
-$('#load').click(function(){
-    favouritesCookie = Cookies.get("favourites");
-    deselectedCookie = Cookies.get("deselected");
-    favourites = [favouritesCookie];
-    deselected = [deselectedCookie];
-    console.log(favouritesCookie);
-    console.log(deselectedCookie);
-    console.log(favourites);
-    console.log(deselected);
-    console.log("Layout Loaded");
-});
+
 
 });
