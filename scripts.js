@@ -74,11 +74,11 @@ $('#save').click(function(){
 $('#load').click(function(){
     favouritesCookie = Cookies.get("favourites");
     deselectedCookie = Cookies.get("deselected");
-    favourites = [favouritesCookie];
+    favourite_fighter = [favouritesCookie];
     deselected = [deselectedCookie];
     console.log(favouritesCookie);
     console.log(deselectedCookie);
-    console.log(favourites);
+    console.log(favourite_fighter);
     console.log(deselected);
     console.log("Layout Loaded");
 });
@@ -89,7 +89,7 @@ $('#load').click(function(){
 
 
 $('#random_btn').click(function() {
-    console.log(favourites);
+    console.log(favourite_fighter);
     console.log(deselected);
     //This gets rid of class "red"
     $('.fighter_name').removeClass("red");
