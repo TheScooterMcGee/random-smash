@@ -282,6 +282,8 @@ $('#load').click(function(){
     var deselectedCookie = Cookies.get("deselected".val);
     favourites = [favouritesCookie];
     deselected = [deselectedCookie];
+    console.log(favourites);
+    console.log(deselected);
     console.log("Layout Loaded");
 });
 
