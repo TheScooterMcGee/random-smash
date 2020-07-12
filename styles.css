@@ -1,0 +1,163 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+.red {
+    color: red !important;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.container {
+    margin: auto;
+    margin-bottom: 85px;
+}
+
+.fighter_box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 650px;
+    margin: 5px;
+    position: relative;
+    color: #fff;
+    background-color: #000 !important;
+    background-repeat: repeat;
+    background: url('assets/misc/background.webp') 0 0;
+    background-size: 6px;
+}
+
+.fighter_box img {
+    height: 100px;
+    margin-left: -100px;
+}
+
+.fighter_box i {
+    padding: 10px;
+    background-color: #333;
+    margin: 0 5px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.fighter_box p {
+    margin-right: 25px;
+    font-size: 20px;
+    font-family: "Roboto";
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: white;
+}
+
+.deselected .fa-user-slash{
+    color: red;
+}
+.deselected::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.favourited {
+    box-shadow: gold 0 0 0 2px;
+}
+
+.favourited .fa-star {
+    color: gold;
+}
+
+#container {
+    left: 0px;
+    top: -100px;
+    right: 0;
+    bottom: -100px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 998;
+    pointer-events: none;
+  }
+
+  .DKTIME-container {
+    background: linear-gradient(180deg, rgba(255,192,0,0) 0%, rgba(255,231,0,0.5970763305322129) 100%);
+  }
+  
+  #animate{
+    margin: 0 auto;
+    width: 20px;
+    overflow: visible;
+    position: relative;
+  }
+
+  #random_btn {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: blue;
+      color: #fff;
+      border: none;
+      z-index: 999;
+      cursor: pointer;
+      padding: 25px 0;
+  }
+
+  .fighter_screen {
+      width: 100%;
+      height: calc(50vh - 65px);
+      display: flex;
+      align-items: center;
+  }
+
+  #img {
+      height: 150px !important;
+  }
+
+  #demo {
+    color: #fff;
+    display: inline-block;
+    font-family: roboto;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    margin-right: -200px;
+    font-size: 40px;
+    z-index: 1;
+  }
+
+  .selected_fighter {
+    height: 150px;
+    width: auto;
+    margin: auto;
+    box-shadow: gold 0 0 0 5px;
+    background-repeat: repeat;
+    background: url(assets/misc/background.webp) 0 0;
+    background-size: 9px;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+  }
+
+  #ssbu_logo {
+      width: 150px;
+      display: block;
+      margin: auto;
+      margin-top: 25px;
+  }
