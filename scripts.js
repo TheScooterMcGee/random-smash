@@ -1,4 +1,5 @@
 $(document).ready(function(){
+//cookies to save your preferences
 
 //Global Variables
 //Games
@@ -64,8 +65,6 @@ str += '</ul>';
 document.getElementById("fighter_list").innerHTML = str;
 
 
-
-
 $('#save').click(function(){
     Cookies.set('deselected',deselected, {expires: 365});
     Cookies.set('favourites',favourites, {expires: 365});
@@ -76,11 +75,7 @@ $('#load').click(function(){
     deselectedCookie = Cookies.get("deselected");
     favourites = [favouritesCookie];
     deselected = [deselectedCookie];
-    console.log(favouritesCookie);
-    console.log(deselectedCookie);
     favourite_fighter = favourites;
-    console.log(favourites);
-    console.log(deselected);
     console.log("Layout Loaded");
 });
 
@@ -89,11 +84,12 @@ $('#load').click(function(){
 
 
 
+
+
+
+
+
 $('#random_btn').click(function() {
-    console.log(favourites);
-    console.log(deselected);
-    //This gets rid of class "red"
-    $('.fighter_name').removeClass("red");
     //Removes characters you hate
     fighters = fighters.filter( function( el ) {
         return !deselected.includes( el );
@@ -113,11 +109,9 @@ $('#random_btn').click(function() {
         var random_fighter = favourite_fighter[Math.floor(Math.random() * favourite_fighter.length)];
         $("#demo").text(random_fighter);
         console.log(random_fighter);
-        console.log("THIS IS A FAVOURITE");
     }
     $('.fighter_name').each(function(){
         if($(this).data("fighter") === random_fighter) {
-            $(this).addClass("red");
             $('#img').attr("src","assets/fighters/icon/" + random_fighter.replace(/ /g,"_") + ".webp");
         }
         //Dumb fix, but it resets the fighter list
@@ -289,6 +283,11 @@ $('#DKTIME').click(function(){
     animate();
 });
 
-
+$('#console').click(function(){
+    console.log(favourites);
+    console.log(deselected);
+    console.log(favouritesCookie);
+    console.log(deselectedCookie);
+});
 
 });
