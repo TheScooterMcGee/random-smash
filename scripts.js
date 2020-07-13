@@ -1,9 +1,9 @@
 $(document).ready(function(){
 //cookies to save your preferences
-var json_fav = Cookies.get("favourites");
-var json_des = Cookies.get("deselected");
-var favouritesCookie = JSON.parse(json_fav);
-var deselectedCookie = JSON.parse(json_fav);
+//var json_fav = Cookies.get("favourites");
+//var json_des = Cookies.get("deselected");
+var favouritesCookie = JSON.parse(Cookies.get("favourites"));
+var deselectedCookie = JSON.parse(Cookies.get("deselected"));
 
 
 //Global Variables
@@ -71,17 +71,13 @@ document.getElementById("fighter_list").innerHTML = str;
 
 
 $('#save').click(function(){
-    json_fav = JSON.stringify(favourites);
-    json_des = JSON.stringify(deselected);
-    Cookies.set('deselected',json_des, {expires: 365});
-    Cookies.set('favourites',json_fav, {expires: 365});
+    Cookies.set('deselected',JSON.stringify(deselected), {expires: 365});
+    Cookies.set('favourites',JSON.stringify(favourites), {expires: 365});
     console.log("Layout Saved");
 });
 $('#load').click(function(){
-    json_fav = Cookies.get("favourites");
-    json_des = Cookies.get("deselected");
-    favouritesCookie = JSON.parse(json_fav);
-    deselectedCookie = JSON.parse(json_fav);
+    favouritesCookie = JSON.parse(Cookies.get("favourites"));
+    deselectedCookie = JSON.parse(Cookies.get("deselected"));
     console.log("Layout Loaded");
 });
 
