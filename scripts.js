@@ -774,14 +774,14 @@ $(document).ready(function() {
         // Filters characters you love
         const favourite = fighter.filter(val => val.favourite === true);
         // Selects favourite
-        if (Math.random() * 10 > 7.5) {
+        if (Math.random() * 10 > 6.6) {
             fighter = favourite;
         }
         // The sum total of all character's counters combined
         let total = 1;
         for (let i = 0; i < fighter.length; i++) {
             total += fighter[i].counter;
-            fighter[i].counter++;
+            fighter[i].counter += 2;
         }
         // Picks a random number from total
         const threshold = Math.floor(Math.random() * total);
