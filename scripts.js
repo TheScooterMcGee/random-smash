@@ -875,7 +875,8 @@ $(document).ready(function() {
             names[i].removed = false;
             names[i].favourite = false;
         }
-        console.log(names);
+        console.log(removed);
+        console.log(favourite);
         // Adds removed
         for(let i = 0; i < removed.length; i++) {
             removed[i].removed = true;
