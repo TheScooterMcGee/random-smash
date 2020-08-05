@@ -864,8 +864,8 @@ $(document).ready(function() {
         Cookies.set("favourite", JSON.stringify(favourite), {expires: 365});
     }
     function load() {
-        let removed = Cookies.get(JSON.parse("removed"));
-        let favourite = Cookies.get(JSON.parse("favourite"));
+        let removed = JSON.parse(Cookies.get("removed"));
+        let favourite = JSON.parse(Cookies.get("favourite"));
         // Resets classes
         $(".fighter-name").each(function() {
             $(this).removeClass("removed favourite");
