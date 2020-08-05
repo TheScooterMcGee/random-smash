@@ -9,7 +9,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Donkey Kong",
@@ -20,7 +21,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Link",
@@ -31,7 +33,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Samus",
@@ -42,14 +45,16 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Dark Samus",
             "colour": "#616a7f",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Yoshi",
@@ -60,7 +65,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Kirby",
@@ -71,7 +77,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Fox",
@@ -82,7 +89,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Pikachu",
@@ -93,7 +101,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Luigi",
@@ -104,7 +113,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Ness",
@@ -115,7 +125,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Captain Falcon",
@@ -126,7 +137,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Jigglypuff",
@@ -137,7 +149,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Peach",
@@ -147,14 +160,16 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Daisy",
             "colour": "#f6c84c",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Bowser",
@@ -164,7 +179,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Ice Climbers",
@@ -173,7 +189,8 @@ $(document).ready(function() {
             "brawl": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Sheik",
@@ -183,7 +200,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Zelda",
@@ -193,7 +211,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Dr. Mario",
@@ -202,7 +221,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Pichu",
@@ -210,7 +230,8 @@ $(document).ready(function() {
             "melee": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Falco",
@@ -220,7 +241,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Marth",
@@ -230,7 +252,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Lucina",
@@ -238,7 +261,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Young Link",
@@ -246,7 +270,8 @@ $(document).ready(function() {
             "melee": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Ganondorf",
@@ -256,7 +281,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Mewtwo",
@@ -265,7 +291,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Roy",
@@ -274,14 +301,16 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Chrom",
             "colour": "#d5d5d5",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Mr. Game & Watch",
@@ -291,7 +320,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Meta Knight",
@@ -300,7 +330,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Pit",
@@ -309,7 +340,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Dark Pit",
@@ -317,7 +349,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Zero Suit Samus",
@@ -326,7 +359,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Wario",
@@ -335,7 +369,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Snake",
@@ -343,7 +378,8 @@ $(document).ready(function() {
             "brawl": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Ike",
@@ -352,7 +388,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Pokémon Trainer",
@@ -361,7 +398,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Diddy Kong",
@@ -370,7 +408,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Lucas",
@@ -379,7 +418,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Sonic",
@@ -388,7 +428,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "King Dedede",
@@ -397,7 +438,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Olimar",
@@ -406,7 +448,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Lucario",
@@ -415,7 +458,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "R.O.B.",
@@ -424,7 +468,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Toon Link",
@@ -433,7 +478,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Wolf",
@@ -441,7 +487,8 @@ $(document).ready(function() {
             "brawl": true,
             "removed": false,
             "favourite": false,
-            "counter": 0
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Villager",
@@ -449,7 +496,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Mega Man",
@@ -457,7 +505,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Wii Fit Trainer",
@@ -465,7 +514,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 3000
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Rosalina & Luma",
@@ -473,7 +523,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Little Mac",
@@ -481,7 +532,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Greninja",
@@ -489,7 +541,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Palutena",
@@ -497,7 +550,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Pac-Man",
@@ -505,7 +559,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Robin",
@@ -513,7 +568,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Shulk",
@@ -521,7 +577,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Bowser Jr.",
@@ -529,7 +586,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Duck Hunt",
@@ -537,7 +595,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Ryu",
@@ -545,14 +604,16 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Ken",
             "colour": "#d3dbe0",
             "removed": false,
             "favourite": false,
-            "counter": 0
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Cloud",
@@ -560,7 +621,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Corrin",
@@ -568,7 +630,8 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Bayonetta",
@@ -576,153 +639,124 @@ $(document).ready(function() {
             "four": true,
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Inkling",
             "colour": "#f868a3",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Ridley",
             "colour": "#616a7f",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Simon",
             "colour": "#ae4d3c",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Richter",
             "colour": "#438eb1",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "King K. Rool",
             "colour": "#8ab457",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Isabelle",
             "colour": "#74b586",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Incineroar",
             "colour": "#fddb24",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Piranha Plant",
             "colour": "#25b593",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Joker",
             "colour": "#a00f00",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Hero",
             "colour": "#cdb4f5",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Banjo & Kazooie",
             "colour": "#fac85a",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Terry",
             "colour": "#6eb5ff",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Byleth",
             "colour": "#a3e6bd",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         },
         {
             "name": "Min Min",
             "colour": "#ffff83",
             "removed": false,
             "favourite": false,
-            "counter": 1
+            "counter": 1,
+            "recent": false
         }
     ];
-    //This generates a random fighter
-    /* $('#random_btn').click(function() {
-         //Remove fighters you hate
-         var filter_removed = names.filter(val => val.removed === false);
-         //Filter favourite characters
-         var filter_favourite = names.filter(val => val.favourite === true);
-         
-         filter_removed.forEach(function(val) {
-             //console.log(val.name);
-         });
-         filter_favourite.forEach(function(val) {
-             //console.log(val.name);
-         });
-         //This updates counter for each fighter +1
-         filter_removed.forEach(function(val) {
-             val.counter = val.counter + 1;
-             //console.log(val.name);
-             //console.log(val.counter);
-         });
 
-
-
-
-
-         //Picks random fighter
-     var random_fighter = fighters[Math.floor(Math.random() * fighters.length)];
-     if(Math.round(Math.random() * 10) > 5) { //Pick a random fighter
-         $("#demo").text(random_fighter);
-         console.log(random_fighter);
-     } else if(favourite_fighter == "") { //If there are no favourites, pick a regular fighter
-         $("#demo").text(random_fighter);
-         console.log(random_fighter);
-     } else { //If there are favourites and the dice roll says so
-         var random_fighter = favourite_fighter[Math.floor(Math.random() * favourite_fighter.length)];
-         $("#demo").text(random_fighter);
-         console.log(random_fighter);
-     }
-
-
-
-
-     //This creates a new fighter block for each character
-     names.forEach(function(val) {
-         $('#fighters').append(`<li class='fighter-box'><div class='fighter-name' data-fighter='${val.name}'><img class='series-logo' src='../assets/logos/${val.name.replace(/ /g, "_")}.svg' alt='${val.name}'><div class='fighter-info'><h3>${val.name}</h3><button class='favourite_btn'><i class='fas fa-star' title='Favourite'></i></button><button class='remove_btn'><i class='fas fa-user-slash' title='Remove from Random'></i></button></div><img class='fighter-icon' src='../assets/fighters/icon/${val.name.replace(/ /g, "_")}.webp' alt='${val.name}'></div><div class='gradient' style='background: linear-gradient(-45deg, ${val.colour} 20%, transparent 80%);'></li>`);
-     });*/
-
+     // This changes the class
      function changeClass(val, item, x) {
          if (x === "add") {
             return $(item).parent().parent().addClass(val);
@@ -735,7 +769,7 @@ $(document).ready(function() {
     //This creates a new fighter block for each character
     function createNewBlock() {
         for (let i = 0; i < names.length; i++) {
-            $('#fighters').append(`<li class='fighter-box'><div class='fighter-name' data-fighter='${names[i].name}'><img class='series-logo' src='assets/logos/${names[i].name.replace(/ /g, "_")}.svg' alt='${names[i].name}'><div class='fighter-info'><h3>${names[i].name}</h3><button class='favourite_btn'><i class='fas fa-star' title='Favourite'></i></button><button class='remove_btn'><i class='fas fa-user-slash' title='Remove from Random'></i></button></div><img class='fighter-icon' src='assets/fighters/icon/${names[i].name.replace(/ /g, "_")}.webp' alt='${names[i].name}'></div><div class='gradient' style='background: linear-gradient(-45deg, ${names[i].colour} 20%, transparent 80%);'></li>`);
+            $('#fighters').append(`<li class='fighter-box'><div class='fighter-name' data-fighter='${names[i].name}'><img class='series-logo' src='../assets/logos/${names[i].name.replace(/ /g, "_")}.svg' alt='${names[i].name}'><div class='fighter-info'><h3>${names[i].name}</h3><button class='favourite_btn'><i class='fas fa-star' title='Favourite'></i></button><button class='remove_btn'><i class='fas fa-user-slash' title='Remove from Random'></i></button></div><img class='fighter-icon' src='../assets/fighters/icon/${names[i].name.replace(/ /g, "_")}.webp' alt='${names[i].name}'></div><div class='gradient' style='background: linear-gradient(-45deg, ${names[i].colour} 20%, transparent 80%);'></li>`);
         }
     }
     createNewBlock();
@@ -767,21 +801,34 @@ $(document).ready(function() {
     });
 
 
+    let recentFighters = [];
+
+    function parseArray(val) {
+        recentFighters.push(val);
+        val.recent = true;
+        if (recentFighters.length > 5) { // How many recent fighters are blocked
+            recentFighters[0].recent = false;
+            recentFighters[0].counter = 0;
+            recentFighters.shift();
+        }
+    }
+
     // This selectes a random fighter based on times since they were last picked
     $('#random_btn').click(function() {
         // Removes characters you hate
-        let fighter = names.filter(val => val.removed === false);
+        const n = names.filter(val => val.removed === false);
+        let fighter = n.filter(val => val.recent === false);
         // Filters characters you love
         const favourite = fighter.filter(val => val.favourite === true);
         // Selects favourite
-        if (Math.random() * 10 > 6.6) {
+        if (favourite.length > 0 && Math.random() * 10 > 6.6) { // How frequently you get random
             fighter = favourite;
         }
         // The sum total of all character's counters combined
         let total = 1;
         for (let i = 0; i < fighter.length; i++) {
             total += fighter[i].counter;
-            fighter[i].counter += 2;
+            fighter[i].counter += 2; // This number makes getting repeats harder
         }
         // Picks a random number from total
         const threshold = Math.floor(Math.random() * total);
@@ -790,69 +837,15 @@ $(document).ready(function() {
         for (let i = 0; i < fighter.length; i++) {
             total += fighter[i].counter;
             if (total >= threshold) {
-                // Change selected character's counter back to 1
-                fighter[i].counter = 1;
+                parseArray(fighter[i]);
+                console.log(fighter[i]);
                 // Change fighter screen to show character info
-                $("#random-img").attr("src", "assets/fighters/" + fighter[i].name.replace(/ /g, "_") + ".webp");
-                $("#random-logo").attr("src", "assets/logos/" + fighter[i].name.replace(/ /g, "_") + ".svg");
+                $("#random-img").attr("src", "../assets/fighters/" + fighter[i].name.replace(/ /g, "_") + ".webp");
+                $("#random-logo").attr("src", "../assets/logos/" + fighter[i].name.replace(/ /g, "_") + ".svg");
                 $("#random-name").text(fighter[i].name);
                 $("#random-colour").css("background", "linear-gradient(-45deg, " + fighter[i].colour + " 20%, transparent 80%)");
                 break;
             }
         }
-    });
-
-
-    let removed = [];
-    let favourite = [];
-
-
-    function save() {
-        // Reset variables
-        removed = [];
-        favourite = [];
-        for (let i = 0; i < names.length; i++) {
-            if (names[i].removed === true) {
-                removed.push(names[i].name);
-            }
-            if (names[i].favourite === true) {
-                favourite.push(names[i].name);
-            }
-        }
-        Cookies.set("removed", removed, {expires: 365});
-        Cookies.set("favourite", favourite, {expires: 365});
-        console.log(removed);
-        console.log(favourite);
-    }
-    function load() {
-        // let removed = Cookies.get("removed");
-        // let favourite = Cookies.get("favourite");
-        for (let i = 0; i < names.length; i++) {
-            for (let j = 0; j < removed.length; j++) {
-                if (removed[j] === names[i].name) {
-                    names[i].removed = true;
-                    changeClass("removed", this, "add");
-                } else {
-                    changeClass("removed", this, "remove");
-                }
-            }
-            for (let c = 0; c < favourite.length; c++) {
-                if (favourite[c] === names[i].name) {
-                    names[i].favourite = true;
-                    changeClass("favourite", this, "add");
-                } else {
-                    changeClass("favourite", this, "remove");
-                }
-            }
-        }
-        console.log(removed);
-        console.log(favourite);
-    }
-
-    $("#save_btn").click(function() {
-        save();
-    });
-    $("#load_btn").click(function() {
-        load();
     });
 });
