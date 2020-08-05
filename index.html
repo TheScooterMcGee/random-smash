@@ -157,17 +157,49 @@
         .removed {
             color: red!important;
         }
+
+        #container {
+            left: 0px;
+            top: -100px;
+            right: 0;
+            bottom: -100px;
+            overflow: hidden;
+            position: fixed;
+            z-index: 998;
+            pointer-events: none;
+        }
+
+        .DKTIME-container {
+            background: linear-gradient(180deg, rgba(255,192,0,0) 0%, rgba(255,231,0,0.5970763305322129) 100%);
+        }
+        
+        #animate{
+            margin: 0 auto;
+            width: 20px;
+            overflow: visible;
+            position: relative;
+        }
     </style>
 </head>
 <body>
+    <div id="container">
+        <div id="animate"></div>
+        <audio id="dk_rap">
+            <source src="../assets/audio/music/dk_rap.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <button id="DKTIME">DK TIME</button>
     <button id="random_btn">Random</button>
-    <nav><img src="assets/misc/ssbu.svg" alt="Super Smash Bros. Ultimate Logo"></nav>
+    <button id="save_btn">Save</button>
+    <button id="load_btn">Load</button>
+    <nav><img src="../assets/misc/ssbu.svg" alt="Super Smash Bros. Ultimate Logo"></nav>
     <section id="select-screen">
-        <img id="smash-ball" src="assets/misc/smash_ball.svg" alt="Smash Ball">
+        <img id="smash-ball" src="../assets/misc/smash_ball.svg" alt="Smash Ball">
         <div id="random-fighter">
-            <img id="random-logo" src="assets/logos/luigi.svg" alt="luigi">
+            <img id="random-logo" src="../assets/logos/luigi.svg" alt="luigi">
             <h2 id="random-name">Luigi</h2>
-            <img id="random-img" src="assets/fighters/luigi.webp" alt="luigi">
+            <img id="random-img" src="../assets/fighters/luigi.webp" alt="luigi">
             <div id="random-background"></div>
             <div id="random-colour" style="background: linear-gradient(-45deg, rgb(118, 177, 96) 20%, transparent 80%);"></div>
         </div>
