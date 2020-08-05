@@ -912,6 +912,18 @@ $(document).ready(function() {
     $("#load_btn").click(function() {
         load(this);
     });
+    
+    $("#reset").click(function() {
+        // Resets classes
+        $(".fighter-name").each(function() {
+            $(this).removeClass("removed favourite");
+        });
+        // Resets values
+        for(let i = 0; i < names.length; i++) {
+            names[i].removed = false;
+            names[i].favourite = false;
+        }
+    });
 
     $('#DKTIME').click(function(){
         $("#random-img").attr("src", "../assets/fighters/donkey_kong.webp");
