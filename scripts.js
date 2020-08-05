@@ -875,15 +875,18 @@ $(document).ready(function() {
             names[i].removed = false;
             names[i].favourite = false;
         }
-        console.log(removed);
-        console.log(favourite);
-        // Adds removed
-        for(let i = 0; i < removed.length; i++) {
-            removed[i].removed = true;
-        }
-        // Adds favourites
-        for(let i = 0; i < favourite.length; i++) {
-            favourite[i].removed = true;
+        // Adds favourites and removed
+        for(let i = 0; i < names.length; i++) {
+            for(let j = 0; j < removed.length; j++) {
+                if (removed[j].name === names[i].name) {
+                    names[i].removed = true;
+                }
+            }
+            for (let k = 0; k < favourite.length; k++) {
+                if (favourite[k].name === names[i].name) {
+                    names[i].favourite = true;
+                }
+            }
         }
         // Adds removed classes
         for (let i = 0; i < removed.length; i++) {
