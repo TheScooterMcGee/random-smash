@@ -860,12 +860,12 @@ $(document).ready(function() {
                 favourite.push(names[i]);
             }
         }
-        Cookies.set("removed", removed, {expires: 365});
-        Cookies.set("favourite", favourite, {expires: 365});
+        Cookies.set("removed", JSON.stringify(removed), {expires: 365});
+        Cookies.set("favourite", JSON.stringify(favourite), {expires: 365});
     }
     function load() {
-        let removed = Cookies.get("removed");
-        let favourite = Cookies.get("favourite");
+        let removed = Cookies.get(JSON.parse("removed"));
+        let favourite = Cookies.get(JSON.parse("favourite"));
         // Resets classes
         $(".fighter-name").each(function() {
             $(this).removeClass("removed favourite");
