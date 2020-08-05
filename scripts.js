@@ -838,7 +838,6 @@ $(document).ready(function() {
             total += fighter[i].counter;
             if (total >= threshold) {
                 parseArray(fighter[i]);
-                console.log(fighter[i]);
                 // Change fighter screen to show character info
                 $("#random-img").attr("src", "assets/fighters/" + fighter[i].name.replace(/ /g, "_") + ".webp");
                 $("#random-logo").attr("src", "assets/logos/" + fighter[i].name.replace(/ /g, "_") + ".svg");
