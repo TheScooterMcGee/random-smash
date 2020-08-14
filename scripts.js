@@ -924,6 +924,29 @@ $(document).ready(function() {
             names[i].favourite = false;
         }
     });
+    
+    $('#smash_64').click(function(){
+        let smash64 = [];
+        for (let i = 0; i < names.length; i++) {
+            if (names[i].sixtyfour) {
+                names[i].removed = false
+                smash64.push(names[i].name);
+            } else {
+                names[i].removed = true
+            }
+        }
+        $(".fighter-name").each(function() {
+            let element = $(this).data("fighter");
+            for (let i = 0; i < smash64.length; i++) {
+                if (element != smash64[i]) {
+                    $(this).addClass("removed");
+                } else {
+                    $(this).removeClass("removed");
+                }
+            }
+            }
+        });
+    });
 
     $('#DKTIME').click(function(){
         $("#random-img").attr("src", "../assets/fighters/donkey_kong.webp");
