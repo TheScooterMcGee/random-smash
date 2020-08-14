@@ -944,7 +944,6 @@ $(document).ready(function() {
                     $(this).removeClass("removed");
                 }
             }
-            }
         });
     });
 
