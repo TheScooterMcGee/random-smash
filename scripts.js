@@ -935,6 +935,7 @@ $(document).ready(function() {
                 names[i].removed = true
             }
         }
+        console.log(smash64);
         $(".fighter-name").each(function() {
             let element = $(this).data("fighter");
             for (let i = 0; i < smash64.length; i++) {
