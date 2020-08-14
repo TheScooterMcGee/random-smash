@@ -935,7 +935,7 @@ $(document).ready(function() {
                 names[i].removed = true
             }
         }
-        $(".fighter-name").each(function() {
+        /*$(".fighter-name").each(function() {
             let element = $(this).data("fighter");
             for (let i = 0; i < smash64.length; i++) {
                 console.log(smash64[i]);
@@ -945,7 +945,7 @@ $(document).ready(function() {
                     $(this).removeClass("removed");
                 }
             }
-        });
+        });*/
     });
 
     $('#DKTIME').click(function(){
