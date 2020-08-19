@@ -759,9 +759,9 @@ $(document).ready(function() {
      // This changes the class
      function changeClass(val, item, x) {
          if (x === "add") {
-            return $(item).parent().parent().addClass(val);
+            return $(item).parent().parent().parent().parent().addClass(val);
          } else if (x === "remove") {
-            return $(item).parent().parent().removeClass(val);
+            return $(item).parent().parent().parent().parent().removeClass(val);
          }
     }
 
@@ -787,10 +787,10 @@ $(document).ready(function() {
         }
         if (fighter[val] === false) {
             fighter[val] = true;
-            changeClass(val, favRem, "add");
+            changeClass(val, item, "add");
         } else {
             fighter[val] = false;
-            changeClass(val, favRem, "remove");
+            changeClass(val, item, "remove");
         }
     }
     $('.favourite_btn').click(function() {
