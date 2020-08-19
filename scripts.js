@@ -901,7 +901,7 @@ $(document).ready(function() {
         for (let i = 0; i < removed.length; i++) {
             $(".fighter_info").each(function() {
                 if ($(this).data("fighter") === removed[i].name) {
-                    $(this).addClass("removed");
+                    $(this).parent().parent().addClass("removed");
                 }
             });
         }
@@ -909,7 +909,7 @@ $(document).ready(function() {
         for (let i = 0; i < favourite.length; i++) {
             $(".fighter_info").each(function() {
                 if ($(this).data("fighter") === favourite[i].name) {
-                    $(this).addClass("favourite");
+                    $(this).parent().parent().addClass("favourite");
                 }
             });
         }
@@ -925,7 +925,7 @@ $(document).ready(function() {
     $("#reset").click(function() {
         // Resets classes
         $(".fighter-name").each(function() {
-            $(this).removeClass("removed favourite");
+            $(this).parent().parent().removeClass("removed favourite");
         });
         // Resets values
         for(let i = 0; i < names.length; i++) {
