@@ -299,10 +299,11 @@ nav img {
   z-index: 3;
 }
 .favourite {
-  color: green!important;
+  box-shadow: 0 0 0 2px gold;
+  color: gold;
 }
 .removed {
-  color: red!important;
+  opacity: 0.3;
 }
 
 #container {
