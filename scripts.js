@@ -813,39 +813,40 @@ $(document).ready(function() {
         }
     }
 
-    // This selectes a random fighter based on times since they were last picked
-    function newRandom() {
-        // Removes characters you hate
-        const n = names.filter(val => val.removed === false);
-        let fighter = n.filter(val => val.recent === false);
-        // Filters characters you love
-        const favourite = fighter.filter(val => val.favourite === true);
-        // Selects favourite
-        if (favourite.length > 0 && Math.random() * 10 > 6.6) { // How frequently you get random
-            fighter = favourite;
-        }
-        // The sum total of all character's counters combined
-        let total = 1;
-        for (let i = 0; i < fighter.length; i++) {
-            total += fighter[i].counter;
-            fighter[i].counter += 2; // This number makes getting repeats harder
-        }
-        // Picks a random number from total
-        const threshold = Math.floor(Math.random() * total);
-        // Runs through all character's counters until it's equal to threshold
-        total = 0;
-        for (let i = 0; i < fighter.length; i++) {
-            total += fighter[i].counter;
-            if (total >= threshold) {
-                parseArray(fighter[i]);
-                // Change fighter screen to show character info
-                $("#random-img").attr("src", "assets/fighters/" + fighter[i].name.replace(/ /g, "_") + ".webp");
-                $("#random-logo").attr("src", "assets/logos/" + fighter[i].name.replace(/ /g, "_") + ".svg");
-                $("#random-name").text(fighter[i].name);
-                $("#random-colour").css("background", "linear-gradient(-45deg, " + fighter[i].colour + " 20%, transparent 80%)");
-                break;
-            }
-        }
+	    // This selectes a random fighter based on times since they were last picked	
+    function newRandom() {	
+        // Removes characters you hate	
+        const n = names.filter(val => val.removed === false);	
+        let fighter = n.filter(val => val.recent === false);	
+        // Filters characters you love	
+        const favourite = fighter.filter(val => val.favourite === true);	
+        // Selects favourite	
+        if (favourite.length > 0 && Math.random() * 10 > 6.6) { // How frequently you get random	
+            fighter = favourite;	
+        }	
+        // The sum total of all character's counters combined	
+        let total = 1;	
+        for (let i = 0; i < fighter.length; i++) {	
+            total += fighter[i].counter;	
+            fighter[i].counter += 2; // This number makes getting repeats harder	
+        }	
+        // Picks a random number from total	
+        const threshold = Math.floor(Math.random() * total);	
+        // Runs through all character's counters until it's equal to threshold	
+        total = 0;	
+        for (let i = 0; i < fighter.length; i++) {	
+            total += fighter[i].counter;	
+            if (total >= threshold) {	
+                parseArray(fighter[i]);	
+                // Change fighter screen to show character info	
+                $("#random-img").attr("src", "assets/fighters/" + fighter[i].name.replace(/ /g, "_") + ".webp");	
+                $("#random-logo").attr("src", "assets/logos/" + fighter[i].name.replace(/ /g, "_") + ".svg");	
+                $("#random-name").text(fighter[i].name);	
+                $("#random-colour").css("background", "linear-gradient(-45deg, " + fighter[i].colour + " 20%, transparent 80%)");	
+                break;	
+            }	
+        }	
+    }	
     // Calls the function	
     $("#random_btn").click(function() {	
         newRandom();	
