@@ -814,7 +814,7 @@ $(document).ready(function() {
     }
 
     // This selectes a random fighter based on times since they were last picked
-    $('#random_btn').click(function() {
+    function newRandom() {
         // Removes characters you hate
         const n = names.filter(val => val.removed === false);
         let fighter = n.filter(val => val.recent === false);
@@ -846,6 +846,14 @@ $(document).ready(function() {
                 break;
             }
         }
+    // Calls the function	
+    $("#random_btn").click(function() {	
+        newRandom();	
+    });	
+    $(window).keydown(function (e){	
+        if (e.keyCode == 82) {	
+            newRandom();	
+        }	
     });
     
     function save() {
