@@ -876,7 +876,7 @@ $(document).ready(function() {
         let removed = JSON.parse(Cookies.get("removed"));
         let favourite = JSON.parse(Cookies.get("favourite"));
         // Resets classes
-        $(".fighter-name").each(function() {
+        $(".fighter_info").each(function() {
             $(this).removeClass("removed favourite");
         });
         // Resets values
@@ -899,7 +899,7 @@ $(document).ready(function() {
         }
         // Adds removed classes
         for (let i = 0; i < removed.length; i++) {
-            $(".fighter-name").each(function() {
+            $(".fighter_info").each(function() {
                 if ($(this).data("fighter") === removed[i].name) {
                     $(this).addClass("removed");
                 }
@@ -907,7 +907,7 @@ $(document).ready(function() {
         }
         // Adds favourite classes
         for (let i = 0; i < favourite.length; i++) {
-            $(".fighter-name").each(function() {
+            $(".fighter_info").each(function() {
                 if ($(this).data("fighter") === favourite[i].name) {
                     $(this).addClass("favourite");
                 }
