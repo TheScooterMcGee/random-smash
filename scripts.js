@@ -787,10 +787,10 @@ $(document).ready(function() {
         }
         if (fighter[val] === false) {
             fighter[val] = true;
-            changeClass(val, item, "add");
+            changeClass(val, favRem, "add");
         } else {
             fighter[val] = false;
-            changeClass(val, item, "remove");
+            changeClass(val, favRem, "remove");
         }
     }
     $('.favourite_btn').click(function() {
