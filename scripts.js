@@ -768,8 +768,9 @@ $(document).ready(function() {
 
     //This creates a new fighter block for each character
     let createNewBlock = () => {
+        const fighters = document.querySelector("#fighters");
         for (let i = 0; i < names.length; i++) {
-            document.querySelector("#fighters").innerHTML += `<li class='fighter_box'><div class='fighter_content'><div class="fighter_info" data-fighter='${names[i].name}'><img class='fighter_logo' src='assets/logos/${names[i].name.replace(/ /g, "_")}.svg' alt='${names[i].name}'><div><h3>${names[i].name}</h3><button class='favourite_btn' title='Favourite'><i class='fas fa-star'></i></button><button class='remove_btn' title='Remove from Random'><i class='fas fa-user-slash'></i></button></div></div><img class='fighter_img' src='assets/fighters/icon/${names[i].name.replace(/ /g, "_")}.webp' alt='${names[i].name}'></div><div class='gradient' style='background: linear-gradient(-45deg, ${names[i].colour} 20%, transparent 80%);'></div></li>`;
+            fighters.appendChild(document.createElement(`<li class='fighter_box'><div class='fighter_content'><div class="fighter_info" data-fighter='${names[i].name}'><img class='fighter_logo' src='assets/logos/${names[i].name.replace(/ /g, "_")}.svg' alt='${names[i].name}'><div><h3>${names[i].name}</h3><button class='favourite_btn' title='Favourite'><i class='fas fa-star'></i></button><button class='remove_btn' title='Remove from Random'><i class='fas fa-user-slash'></i></button></div></div><img class='fighter_img' src='assets/fighters/icon/${names[i].name.replace(/ /g, "_")}.webp' alt='${names[i].name}'></div><div class='gradient' style='background: linear-gradient(-45deg, ${names[i].colour} 20%, transparent 80%);'></div></li>`));
         }
     }
     createNewBlock;
