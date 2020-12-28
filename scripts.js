@@ -753,6 +753,22 @@ $(document).ready(function() {
             "favourite": false,
             "counter": 1,
             "recent": false
+        },
+	{
+            "name": "Steve",
+            "colour": "#71c6fe",
+            "removed": false,
+            "favourite": false,
+            "counter": 1,
+            "recent": false
+        },
+	{
+            "name": "Sephiroth",
+            "colour": "#546565",
+            "removed": false,
+            "favourite": false,
+            "counter": 1,
+            "recent": false
         }
     ];
 
