@@ -850,7 +850,7 @@ $(document).ready(function() {
     }	
     // Calls the function	
     const randomButton = document.querySelector("#random_btn");
-    randomButton.addEventListener("click", newRandom());
+    randomButton.addEventListener("click", newRandom);
     
     window.addEventListener("keydown", function (e){	
         if (e.keyCode == 82) {	
