@@ -1,1070 +1,361 @@
-$(document).ready(function() {
+const RANDOM_BUTTON = document.querySelector('.random-btn');
+const FIGHTER_IMG = document.querySelector('.img-set__container');
+const FUN_FILTER_MODAL = document.querySelector('.crimeStoppers_modal');
+const CHECKBOX = document.querySelector('#funFilterCheckbox');
+// const FIGHTERS_CONTAINER = document.querySelector('#fighters');
+const FIGHTERS_CONTAINER = document.querySelector('.fighter-section__container');
+// const FIGHTER_IMGS = document.querySelector('.images');
+const FIGHTER_IMGS = document.querySelector('.random-display__img-set');
+const NAME_H1 = document.querySelector('#name');
+const LOGO_IMG = document.querySelector('.random-display__logo');
+const IMG_CONTAINER_DIV = document.querySelector('.images');
+// const FIGHTER_IMG = document.querySelector(".fighter_box_img");
+const CALCULATOR_MODAL = document.querySelector('.calculator-modal');
+const REPEAT_INPUT = document.querySelector('#repeat_input');
+const CHANCE_INPUT = document.querySelector('#chance_input');
+const FIGHTER_BOXES = document.querySelectorAll('.fighter_box');
+const MENU = document.querySelector('.slide-menu-container');
+const FIGHTER_GRADIENT = document.querySelector("#random-colour");
 
-    var names = [{
-            "name": "Mario",
-            "colour": "#eb8282",
-            "sixtyfour": true,
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Donkey Kong",
-            "colour": "#f9df64",
-            "sixtyfour": true,
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Link",
-            "colour": "#42b1dd",
-            "sixtyfour": true,
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Samus",
-            "colour": "#616a7f",
-            "sixtyfour": true,
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Dark Samus",
-            "colour": "#616a7f",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Yoshi",
-            "colour": "#95d47b",
-            "sixtyfour": true,
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Kirby",
-            "colour": "#fbc1d4",
-            "sixtyfour": true,
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Fox",
-            "colour": "#4e8ee3",
-            "sixtyfour": true,
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Pikachu",
-            "colour": "#fde22a",
-            "sixtyfour": true,
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Luigi",
-            "colour": "#76b160",
-            "sixtyfour": true,
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Ness",
-            "colour": "#e35d5a",
-            "sixtyfour": true,
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Captain Falcon",
-            "colour": "#9f9be1",
-            "sixtyfour": true,
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Jigglypuff",
-            "colour": "#e79cea",
-            "sixtyfour": true,
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Peach",
-            "colour": "#f6d1f2",
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Daisy",
-            "colour": "#f6c84c",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Bowser",
-            "colour": "#71a48d",
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Ice Climbers",
-            "colour": "#add1fd",
-            "melee": true,
-            "brawl": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Sheik",
-            "colour": "#8883d5",
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Zelda",
-            "colour": "#fcecb0",
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Dr. Mario",
-            "colour": "#eb8282",
-            "melee": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Pichu",
-            "colour": "#e9e751",
-            "melee": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Falco",
-            "colour": "#7ebbe2",
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Marth",
-            "colour": "#73b4cf",
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Lucina",
-            "colour": "#73b4cf",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Young Link",
-            "colour": "#b1d777",
-            "melee": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Ganondorf",
-            "colour": "#8c88b0",
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Mewtwo",
-            "colour": "#8c71c6",
-            "melee": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Roy",
-            "colour": "#88c073",
-            "melee": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Chrom",
-            "colour": "#d5d5d5",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Mr. Game & Watch",
-            "colour": "#b1afa0",
-            "melee": true,
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Meta Knight",
-            "colour": "#6c7dbb",
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Pit",
-            "colour": "#a3d1ec",
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Dark Pit",
-            "colour": "#9873c6",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Zero Suit Samus",
-            "colour": "#477ec2",
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Wario",
-            "colour": "#fce83c",
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Snake",
-            "colour": "#7c93a7",
-            "brawl": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Ike",
-            "colour": "#c0685a",
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Pokémon Trainer",
-            "colour": "#ffc929",
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Diddy Kong",
-            "colour": "#d7645e",
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Lucas",
-            "colour": "#e47e51",
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Sonic",
-            "colour": "#7cabee",
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "King Dedede",
-            "colour": "#fceb8e",
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Olimar",
-            "colour": "#d3f1bb",
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Lucario",
-            "colour": "#c2e7fc",
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "R.O.B.",
-            "colour": "#bcc1c5",
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Toon Link",
-            "colour": "#9ce999",
-            "brawl": true,
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Wolf",
-            "colour": "#d2d2d2",
-            "brawl": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Villager",
-            "colour": "#74b586",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Mega Man",
-            "colour": "#98cae4",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Wii Fit Trainer",
-            "colour": "#a8da93",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Rosalina & Luma",
-            "colour": "#a7dbd4",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Little Mac",
-            "colour": "#648974",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Greninja",
-            "colour": "#6f88b2",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Palutena",
-            "colour": "#9fe7c8",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Pac-Man",
-            "colour": "#f1d76b",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Robin",
-            "colour": "#cb98de",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Shulk",
-            "colour": "#db7a8d",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Bowser Jr.",
-            "colour": "#73c958",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Duck Hunt",
-            "colour": "#9d7557",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Ryu",
-            "colour": "#d66966",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Ken",
-            "colour": "#d3dbe0",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Cloud",
-            "colour": "#5da396",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Corrin",
-            "colour": "#79b2c7",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Bayonetta",
-            "colour": "#b2afe5",
-            "four": true,
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Inkling",
-            "colour": "#f868a3",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Ridley",
-            "colour": "#616a7f",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Simon",
-            "colour": "#ae4d3c",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Richter",
-            "colour": "#438eb1",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "King K. Rool",
-            "colour": "#8ab457",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Isabelle",
-            "colour": "#74b586",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Incineroar",
-            "colour": "#fddb24",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Piranha Plant",
-            "colour": "#25b593",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Joker",
-            "colour": "#a00f00",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Hero",
-            "colour": "#cdb4f5",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Banjo & Kazooie",
-            "colour": "#fac85a",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Terry",
-            "colour": "#6eb5ff",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Byleth",
-            "colour": "#a3e6bd",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-        {
-            "name": "Min Min",
-            "colour": "#ffff83",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-	{
-            "name": "Steve",
-            "colour": "#71c6fe",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        },
-	{
-            "name": "Sephiroth",
-            "colour": "#546565",
-            "removed": false,
-            "favourite": false,
-            "counter": 1,
-            "recent": false
-        }
-    ];
+const fighter_logo = document.querySelector('.random-display__logo');
+const fighter_name = document.querySelector('.random-display__name');
 
-     // This changes the class
-     function changeClass(val, item, x) {
-         if (x === "add") {
-            return $(item).parent().parent().parent().parent().addClass(val);
-         } else if (x === "remove") {
-            return $(item).parent().parent().parent().parent().removeClass(val);
-         }
+const FIGHTER_LEN = CHARACTERS.length;
+const SECRET = "YOU'RE TOO SLOW";
+const root = document.documentElement;
+
+
+
+//This creates a new fighter block for each character
+(function createNewBlock() {
+  for (let i = 0; i < FIGHTER_LEN; i++) {
+      // FIGHTERS_CONTAINER.innerHTML += `
+      // <li class="fighter_box" id="fighter_${i}">
+      //    <div class="fighter_content">
+         
+      //       <div class="fighter_info">
+      //          <img class="fighter_logo" src="https://random-smash.netlify.app/assets/logos/${CHARACTERS[i].name.replace(/ /g, "_")}.svg" alt="${CHARACTERS[i].name} Logo">
+      //          <div>
+      //             <h3>${CHARACTERS[i].name}</h3>
+      //             <button class="function-btn" onclick="favRemFighter(this);" data-id="${i}" data-button="favourite" title="Favourite Fighter"><i class="fas fa-star"></i></button>
+      //             <button class="function-btn" onclick="favRemFighter(this);" data-id="${i}" data-button="removed" title="Remove from Random"><i class="fas fa-user-slash"></i></button>
+      //          </div>
+      //       </div>
+            
+      //       <img class="fighter_img" src="https://random-smash.netlify.app/assets/fighters/icon/${CHARACTERS[i].name.replace(/ /g, "_")}.webp" alt="${CHARACTERS[i].name}">
+      //    </div>
+         
+      //    <div class="gradient" style="background: linear-gradient(-45deg, ${CHARACTERS[i].colour} 20%, transparent 80%);">  
+      //    </div>
+      // </li>
+      // </ul>`;
+      FIGHTERS_CONTAINER.innerHTML += `
+      <div class="fighter-box" id="${i}_${CHARACTERS[i].name}" style="background: linear-gradient(-45deg, ${hexToRGB(CHARACTERS[i].colour)} 20%, transparent 80%);">
+      <div class="fighter-box__content">
+        <img class="fighter-box__logo" src="https://random-smash.netlify.app/assets/logos/${CHARACTERS[i].name.replace(/ /g, "_")}.svg" alt="${CHARACTERS[i].name} Logo">
+        <div class="fighter-box__info">
+          <h3 class="fighter-box__name">${CHARACTERS[i].name}</h3>
+          <button class="fighter-box__btn" onclick="favRemFighter(this);" data-button="favourite" data-id="${i}"><img src="/assets/misc/favourite.svg" alt="Favourite Icon"></button>
+          <button class="fighter-box__btn" onclick="favRemFighter(this);" data-button="removed" data-id="${i}"><img src="/assets/misc/remove.svg" alt="Remove Icon"></button>
+        </div>
+      </div>
+      <img class="fighter-box__img" src="https://random-smash.netlify.app/assets/fighters/icon/${CHARACTERS[i].name.replace(/ /g, "_")}.webp" alt="${CHARACTERS[i].name}">
+    </div>`;
+    FIGHTER_IMGS.innerHTML += `<img class="random-display__img" src="https://random-smash.netlify.app/assets/fighters/${CHARACTERS[i].name.replace(/ /g, "_")}.webp" alt="${CHARACTERS[i].name}">`;
+  }
+})();
+
+
+
+// This filters though all removed and recent CHARACTERS
+// to create a list of available fighters
+// num = how much the counter goes up per iteration
+function filterList(num, repeat) {
+  let fighter = CHARACTERS.filter(name => name.removed === false);
+  const F_LEN = fighter.length;
+
+  for (let i = 0; i < F_LEN; i++) {
+    // Change Recent
+    if (fighter[i].recent < repeat && fighter[i].recent > 0) {
+      fighter[i].recent++;
+    } else if (fighter[i].recent >= repeat) {
+      fighter[i].recent = 0;
     }
-
-
-    //This creates a new fighter block for each character
-    let createNewBlock = () => {
-        const fighters = document.querySelector("#fighters");
-        for (let i = 0; i < names.length; i++) {
-            fighters.innerHTML += `<li class='fighter_box'><div class='fighter_content'><div class="fighter_info" data-fighter='${names[i].name}'><img class='fighter_logo' src='assets/logos/${names[i].name.replace(/ /g, "_")}.svg' alt='${names[i].name}'><div><h3>${names[i].name}</h3><button class='favourite_btn' title='Favourite'><i class='fas fa-star'></i></button><button class='remove_btn' title='Remove from Random'><i class='fas fa-user-slash'></i></button></div></div><img class='fighter_img' src='assets/fighters/icon/${names[i].name.replace(/ /g, "_")}.webp' alt='${names[i].name}'></div><div class='gradient' style='background: linear-gradient(-45deg, ${names[i].colour} 20%, transparent 80%);'></div></li>`;
-        }
+    if (i === (F_LEN - 1) && F_LEN > repeat) {
+      fighter = fighter.filter(name => name.recent === 0);
     }
-    createNewBlock();
+  }
+  const FAVOURITES = fighter.filter(name => name.favourite === true);
+	
+	selectRandom(fighter, FAVOURITES, num);
+}
 
-    // This adds or removes characters from both favourites and removed
-    function setFavRem(val, item) {
-        let fighter;
-        const favRem = $(item).parent().parent().data("fighter");
-
-        for (let i = 0; i < names.length; i++) {
-            if (names[i].name === favRem) {
-                fighter = names[i];
-                break;
-            }
-        }
-        if (fighter[val] === false) {
-            fighter[val] = true;
-            changeClass(val, item, "add");
-        } else {
-            fighter[val] = false;
-            changeClass(val, item, "remove");
-        }
+// This takes the filtered list and selects a makes a running
+// talley of all fighter's counters, then selects the one that matches
+function selectRandom(fighters, favourites, num) {
+  let selectedFighter;
+  let isFavourite = false;
+  let number;
+	let total = 1;
+  const FIGHTER_LENGTH = fighters.length;
+  const FAVOURITE_LENGTH = favourites.length;
+  if (FAVOURITE_LENGTH > 0 && Math.floor(Math.random() * 10 > 7.3)) {
+    isFavourite = true;
+  }
+	for (let i = 0; i < FIGHTER_LENGTH; i++) {
+    // Increasing counter for all fighters (doubles for favourites)
+    // if (!fighters[i].favourite) {
+    fighters[i].counter += num;
+    // } else {
+    //   fighters[i].counter += (num * chance);
+    // }
+    // Tallying up sum total of all fighter's counter
+    if (!isFavourite) {
+      total += fighters[i].counter;
     }
-    $('.favourite_btn').click(function() {
-        setFavRem("favourite", this);
-    });
-    $('.remove_btn').click(function() {
-        setFavRem("removed", this);
-    });
+    // if (isFavourite && i === (FIGHTER_LEN - 1)) {
 
-
-    let recentFighters = [];
-
-    function parseArray(val) {
-        recentFighters.push(val);
-        val.recent = true;
-        if (recentFighters.length > 5) { // How many recent fighters are blocked
-            recentFighters[0].recent = false;
-            recentFighters[0].counter = 0;
-            recentFighters.shift();
-        }
+    // }
+  }
+  if (isFavourite) {
+    for (let i = 0; i < FAVOURITE_LENGTH; i++) {
+      total += favourites[i].counter;
     }
+  }
 
-	    // This selectes a random fighter based on times since they were last picked	
-    function newRandom() {	
-        // Removes characters you hate	
-        const n = names.filter(val => val.removed === false);	
-        let fighter = n.filter(val => val.recent === false);	
-        // Filters characters you love	
-        const favourite = fighter.filter(val => val.favourite === true);	
-        // Selects favourite	
-        if (favourite.length > 0 && Math.random() * 10 > 6.6) { // How frequently you get random	
-            fighter = favourite;	
-        }	
-        // The sum total of all character's counters combined	
-        let total = 1;	
-        for (let i = 0; i < fighter.length; i++) {	
-            total += fighter[i].counter;	
-            fighter[i].counter += 2; // This number makes getting repeats harder	
-        }	
-        // Picks a random number from total	
-        const threshold = Math.floor(Math.random() * total);	
-        // Runs through all character's counters until it's equal to threshold	
-        total = 0;	
-        for (let i = 0; i < fighter.length; i++) {	
-            total += fighter[i].counter;	
-            if (total >= threshold) {	
-                parseArray(fighter[i]);	
-                // Change fighter screen to show character info	
-                $("#random-img").attr("src", "assets/fighters/" + fighter[i].name.replace(/ /g, "_") + ".webp");	
-                $("#random-logo").attr("src", "assets/logos/" + fighter[i].name.replace(/ /g, "_") + ".svg");	
-                $("#random-name").text(fighter[i].name);	
-                $("#random-colour").css("background", "linear-gradient(-45deg, " + fighter[i].colour + " 20%, transparent 80%)");	
-                break;	
-            }	
-        }	
-    }	
-    // Calls the function	
-    const randomButton = document.querySelector("#random_btn");
-    randomButton.addEventListener("click", newRandom);
-    
-    window.addEventListener("keydown", function (e){	
-        if (e.keyCode == 82) {	
-            newRandom();	
-        }	
-    });
-    
-    function save() {
-        // Reset variables
-        let removed = [];
-        let favourite = [];
-        for (let i = 0; i < names.length; i++) {
-            if (names[i].removed === true) {
-                removed.push(names[i]);
-            }
-            if (names[i].favourite === true) {
-                favourite.push(names[i]);
-            }
-        }
-        Cookies.set("removed", JSON.stringify(removed), {expires: 365});
-        Cookies.set("favourite", JSON.stringify(favourite), {expires: 365});
+  // Selects random number from total
+	const THRESHOLD = Math.floor(Math.random() * total);
+  
+  // Resets total
+	total = 0;
+	for (let i = 0; i < FIGHTER_LENGTH; i++) {
+    // If THRESHOLD === total, stop running code and select that fighter
+		total += fighters[i].counter;
+		if (total >= THRESHOLD) {
+      selectedFighter = fighters[i];
+      number = fighters[i].id;
+      fighters[i].counter = 0;
+      fighters[i].recent++;
+			break;
+		}
+	}
+	displayFighter(selectedFighter, number);
+}
+
+// This takes the selected fighter and changes the HTML
+function displayFighter(selectedFighter, num) {
+    fighter_name.innerHTML = selectedFighter.name;
+    root.style.setProperty('--fighter-colour', selectedFighter.colour);
+    root.style.setProperty('--fighter-colour-rgba', hexToRGB(selectedFighter.colour));
+    // FIGHTER_GRADIENT.style.backgroundImage = `linear-gradient(-45deg, ${selectedFighter.colour} 20%, transparent 80%)`;
+    LOGO_IMG.src=`https://random-smash.netlify.app/assets/logos/${selectedFighter.name.replace(/ /g, "_")}.svg`;
+    slideshow(num);
+    if (!funFilter && selectedFighter.name === 'Sonic') {
+      toggleClass(FUN_FILTER_MODAL, 'invisible');
     }
-    function load() {
-        let removed = JSON.parse(Cookies.get("removed"));
-        let favourite = JSON.parse(Cookies.get("favourite"));
-        // Resets classes
-        $(".fighter_info").each(function() {
-            $(this).removeClass("removed favourite");
-        });
-        // Resets values
-        for(let i = 0; i < names.length; i++) {
-            names[i].removed = false;
-            names[i].favourite = false;
-        }
-        // Adds favourites and removed
-        for(let i = 0; i < names.length; i++) {
-            for(let j = 0; j < removed.length; j++) {
-                if (removed[j].name === names[i].name) {
-                    names[i].removed = true;
-                }
-            }
-            for (let k = 0; k < favourite.length; k++) {
-                if (favourite[k].name === names[i].name) {
-                    names[i].favourite = true;
-                }
-            }
-        }
-        // Adds removed classes
-        for (let i = 0; i < removed.length; i++) {
-            $(".fighter_info").each(function() {
-                if ($(this).data("fighter") === removed[i].name) {
-                    $(this).parent().parent().addClass("removed");
-                }
-            });
-        }
-        // Adds favourite classes
-        for (let i = 0; i < favourite.length; i++) {
-            $(".fighter_info").each(function() {
-                if ($(this).data("fighter") === favourite[i].name) {
-                    $(this).parent().parent().addClass("favourite");
-                }
-            });
-        }
-    }
+}
 
-    $("#save_btn").click(function() {
-        save();
-    });
-    $("#load_btn").click(function() {
-        load(this);
-    });
-    
-    $("#reset").click(function() {
-        // Resets classes
-        $(".fighter-name").each(function() {
-            $(this).parent().parent().removeClass("removed favourite");
-        });
-        // Resets values
-        for(let i = 0; i < names.length; i++) {
-            names[i].removed = false;
-            names[i].favourite = false;
-        }
-    });
-    
-    $('#smash_64').click(function(){
-        let smash64 = [];
-        for (let i = 0; i < names.length; i++) {
-            if (names[i].sixtyfour) {
-                names[i].removed = false
-                smash64.push(names[i].name);
-            } else {
-                names[i].removed = true
-            }
-        }
-        /*$(".fighter-name").each(function() {
-            let element = $(this).data("fighter");
-            for (let i = 0; i < smash64.length; i++) {
-                console.log(smash64[i]);
-                if (element != smash64[i]) {
-                    $(this).addClass("removed");
-                } else {
-                    $(this).removeClass("removed");
-                }
-            }
-        });*/
-    });
+// This toggles a class on or off depending on if it already exists
+function toggleClass(elem, className) {
+  if (elem.classList.contains(className)) {
+    return elem.classList.remove(className);
+  } else {
+    return elem.classList.add(className);
+  }
+}
 
-    $('#DKTIME').click(function(){
-        $("#random-img").attr("src", "../assets/fighters/donkey_kong.webp");
-        $("#random-logo").attr("src", "../assets/logos/donkey_kong.svg");
-        $("#random-name").text("Donkey Kong");
-        $("#random-colour").css("background", "linear-gradient(-45deg, #f9df64 20%, transparent 80%)");
-        for(let i = 0; i < names.length; i++) {
-            names[i].removed = true;
-        }
-        $(".fighter-name").each(function() {
-            let element = $(this).data("fighter");
-            if (element != "Donkey Kong") {
-                $(this).addClass("removed");
-            }
-        });
-        names[1].removed = false;
+// These are the variables that alter filterList()
+let counter = 2;
+let repeat = 5;
+let chance = 10;
 
-        $("#container").fadeIn('slow');
-        //Makes Screen golden
-        $("#container").addClass("DKTIME-container");
-        $('#DKTIME').css("pointer-events", "none");
-        //DK RAP
-        $('#dk_rap').get(0).play();
-        setTimeout(function() {
-            $("#container").fadeOut('slow');
-            $('#DKTIME').css("pointer-events", "auto");
-        }, 34500);
-        // Makes Bananas rain
-        var container = document.getElementById('animate');
-        var emoji = ['🍌'];
-        var circles = [];
-        
-        for (var i = 0; i < 15; i++) {
-          addCircle(i * 150, [10 + 0, 300], emoji[Math.floor(Math.random() * emoji.length)]);
-          addCircle(i * 150, [10 + 0, -300], emoji[Math.floor(Math.random() * emoji.length)]);
-          addCircle(i * 150, [10 - 200, -300], emoji[Math.floor(Math.random() * emoji.length)]);
-          addCircle(i * 150, [10 + 200, 300], emoji[Math.floor(Math.random() * emoji.length)]);
-          addCircle(i * 150, [10 - 400, -300], emoji[Math.floor(Math.random() * emoji.length)]);
-          addCircle(i * 150, [10 + 400, 300], emoji[Math.floor(Math.random() * emoji.length)]);
-          addCircle(i * 150, [10 - 600, -300], emoji[Math.floor(Math.random() * emoji.length)]);
-          addCircle(i * 150, [10 + 600, 300], emoji[Math.floor(Math.random() * emoji.length)]);
-        }
-        
-        
-        
-        function addCircle(delay, range, color) {
-          setTimeout(function() {
-            var c = new Circle(range[0] + Math.random() * range[1], 80 + Math.random() * 4, color, {
-              x: -0.15 + Math.random() * 0.3,
-              y: 1 + Math.random() * 1
-            }, range);
-            circles.push(c);
-          }, delay);
-        }
-        
-        function Circle(x, y, c, v, range) {
-          var _this = this;
-          this.x = x;
-          this.y = y;
-          this.color = c;
-          this.v = v;
-          this.range = range;
-          this.element = document.createElement('span');
-          /*this.element.style.display = 'block';*/
-          this.element.style.opacity = 0;
-          this.element.style.position = 'absolute';
-          this.element.style.fontSize = '26px';
-          this.element.style.color = 'hsl('+(Math.random()*360|0)+',80%,50%)';
-          this.element.innerHTML = c;
-          container.appendChild(this.element);
-        
-          this.update = function() {
-            if (_this.y > 800) {
-              _this.y = 80 + Math.random() * 4;
-              _this.x = _this.range[0] + Math.random() * _this.range[1];
-            }
-            _this.y += _this.v.y;
-            _this.x += _this.v.x;
-            this.element.style.opacity = 1;
-            this.element.style.transform = 'translate3d(' + _this.x + 'px, ' + _this.y + 'px, 0px)';
-            this.element.style.webkitTransform = 'translate3d(' + _this.x + 'px, ' + _this.y + 'px, 0px)';
-            this.element.style.mozTransform = 'translate3d(' + _this.x + 'px, ' + _this.y + 'px, 0px)';
-          };
-        }
-        
-        function animate() {
-          for (var i in circles) {
-            circles[i].update();
-          }
-          requestAnimationFrame(animate);
-        }
-        
-        animate();
-    });
+// This changes above variables if user changes input value
+// REPEAT_INPUT.addEventListener('change', () => repeat = parseInt(REPEAT_INPUT.value));
+// CHANCE_INPUT.addEventListener('change', () => chance = parseInt(CHANCE_INPUT.value));
+
+// Call filterList()
+RANDOM_BUTTON.addEventListener('click', () => filterList(counter, repeat, chance));
+window.addEventListener('keydown', e => {	
+  if (e.keyCode == 82) {
+    filterList(counter, repeat, chance);
+  }	
 });
+
+
+// This sets the selected fighter to either favourite or removed
+// depending on which button you press
+const favRemFighter = (self) => {
+  const BUTTON_FUNCTION = self.dataset.button;
+  for (let i = 0; i < FIGHTER_LEN; i++) {
+      if (i === parseInt(self.dataset.id)) {
+          if (CHARACTERS[i][BUTTON_FUNCTION]) {
+            CHARACTERS[i][BUTTON_FUNCTION] = false;
+            self.closest('.fighter-box').classList.remove(BUTTON_FUNCTION);
+          } else {
+            CHARACTERS[i][BUTTON_FUNCTION] = true;
+            self.closest('.fighter-box').classList.add(BUTTON_FUNCTION);
+          }
+      }
+  }
+}
+
+// Change this to false later after debugging
+let funFilter = false;
+
+function toggleFunFilter() {
+  if (CHECKBOX.checked){
+    funFilter = true;
+  } else {
+    funFilter = false;
+  }
+}
+
+
+// Side Menu
+const openMenu = () => {
+  MENU.classList.remove('menuClosed');
+}
+const closeMenu = () => {
+  MENU.classList.add('menuClosed');
+}
+
+// const openBtn = document.querySelector('#hamburger');
+// const closeBtn = document.querySelector('#closeMenu');
+
+// openBtn.addEventListener('click', openMenu);
+// closeBtn.addEventListener('click', closeMenu);
+
+
+
+
+
+
+
+
+
+
+// let activeFighter = 0;
+
+function slideshow(activeFighter) {
+  const rect = FIGHTER_IMG.getBoundingClientRect();
+  const ulWidth = rect.width;
+  root.style.setProperty('--translateX', `-${
+    activeFighter * ulWidth}px`);
+}
+
+
+function reset() {
+  for (let i = 0; i < FIGHTER_LEN; i++) {
+    CHARACTERS[i].recent = 0;
+    CHARACTERS[i].removed = false;
+    CHARACTERS[i].favourite = false;
+    CHARACTERS[i].counter = 10;
+    FIGHTER_BOXES[i].classList.remove('removed', 'favourite');
+  }
+}
+
+function save(name, value) {
+ let date = new Date(Date.now() + (86400 * 365));
+ document.cookie = `${name}=${JSON.stringify(value)};path=/;expires=${date}`;
+}
+
+function load(cookieName) {
+  const ALL_COOKIES = document.cookie;
+  const COOKIE_ARRAY = ALL_COOKIES.split(';');
+  let name;
+  let value;
+  for (let i = 0; i < COOKIE_ARRAY.length; i++) {
+    name = COOKIE_ARRAY[i].split('=')[0].trim();
+    // value = JSON.parse(COOKIE_ARRAY[i].split('=')[1]);
+    // value = JSON.parse(value);
+    if (name === cookieName) {
+      value = JSON.parse(COOKIE_ARRAY[i].split('=')[1]);
+      break;
+    }
+  }
+  for (let i = 0; i < FIGHTER_LEN; i++) {
+    CHARACTERS[i].removed = value[i].removed;
+    CHARACTERS[i].favourite = value[i].favourite;
+    FIGHTER_BOXES[i].classList.remove('removed', 'favourite');
+    if (value[i].removed) {
+      const FIGHTER_VAL = value[i].id;
+      let fighter = document.querySelector(`#fighter_${FIGHTER_VAL}`);
+      fighter.classList.add('removed');
+    }
+    if (value[i].favourite) {
+      const FIGHTER_VAL = value[i].id;
+      let fighter = document.querySelector(`#fighter_${FIGHTER_VAL}`);
+      fighter.classList.add('favourite');
+    }
+  }
+}
+
+function deletePreferences(name) {
+  setCookie(name, '', {
+    'max-age': -1
+  });
+}
+
+function hexToRGB(h) {
+  let r = 0,
+    g = 0,
+    b = 0;
+
+  // 3 digits
+  if (h.length == 4) {
+    r = "0x" + h[1] + h[1];
+    g = "0x" + h[2] + h[2];
+    b = "0x" + h[3] + h[3];
+
+    // 6 digits
+  } else if (h.length == 7) {
+    r = "0x" + h[1] + h[2];
+    g = "0x" + h[3] + h[4];
+    b = "0x" + h[5] + h[6];
+  }
+
+  return "rgba(" + +r + "," + +g + "," + +b + "," + +"0.4" + ")";
+}
+
+
+const DK_TIME__CONTAINER = document.querySelector('.dk-time__container');
+const DKTIME_BTN = document.querySelector("#dk-time-btn");
+
+const bananaInterval = setInterval(createBanana, 50);
+
+let isDKTIME = false;
+
+DKTIME_BTN.addEventListener('click', () => {
+   if (!isDKTIME) {
+      isDKTIME = true;
+      DK_TIME__CONTAINER.classList.remove('invisible');
+    } else {
+      isDKTIME = false;
+      DK_TIME__CONTAINER.classList.add('invisible');
+    } 
+  });
+let deg = 0;
+
+function createBanana() {
+  if (isDKTIME) {
+    deg += 10;
+    root.style.setProperty('--deg', `${deg}deg`);
+    const BANANA = document.createElement('p');
+    BANANA.classList.add('banana');
+    BANANA.innerText = '🍌';
+    BANANA.style.left = Math.random() * window.innerWidth + 'px';
+    BANANA.style.animationDuration = Math.random() * 3 + 2 + 's';
+    BANANA.style.opacity = Math.random() * 0.5 + 0.5;
+    BANANA.style.fontSize = Math.random() * 20 + 10 + 'px';
+
+    DK_TIME__CONTAINER.appendChild(BANANA);
+
+    setTimeout(() => {
+      BANANA.remove();
+    }, 5000);
+  }
+}
+
+  console.log("%c Super Smash Bros. ", "background-color: grey; padding: 20px; color: #fff; font-size: 32px; border-radius: 16px; font-weight: bolder; text-shadow: 6px 4px 0 #000, 4px 0px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;");
+  console.log("I see that you're checking out my code.  I like that about you!");
+  console.log('Try typing "console.log(SECRET);"');
