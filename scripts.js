@@ -99,7 +99,7 @@ function selectRandom(fighters, favourites, num) {
 	let total = 1;
   const FIGHTER_LENGTH = fighters.length;
   const FAVOURITE_LENGTH = favourites.length;
-  if (FAVOURITE_LENGTH > 0 && Math.floor(Math.random() * 10 > 7.3)) {
+  if (FAVOURITE_LENGTH > 0 && Math.floor(Math.random() * 10 > 6.6)) {
     isFavourite = true;
   }
 	for (let i = 0; i < FIGHTER_LENGTH; i++) {
