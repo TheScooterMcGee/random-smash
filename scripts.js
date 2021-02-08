@@ -200,7 +200,7 @@ const favRemFighter = (self) => {
 }
 
 // Change this to false later after debugging
-let funFilter = false;
+let funFilter = true;
 
 function toggleFunFilter() {
   if (CHECKBOX.checked){
