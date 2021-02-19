@@ -61,7 +61,7 @@ const root = document.documentElement;
       </div>
       <img class="fighter-box__img" src="https://random-smash.netlify.app/assets/fighters/icon/${CHARACTERS[i].name.replace(/ /g, "_")}.webp" alt="${CHARACTERS[i].name}">
     </div>`;
-    FIGHTER_IMGS.innerHTML += `<img class="random-display__img" src="https://random-smash.netlify.app/assets/fighters/${CHARACTERS[i].name.replace(/ /g, "_")}.webp" alt="${CHARACTERS[i].name}">`;
+    FIGHTER_IMGS.innerHTML += `<img class="random-display__img" loading="eager" src="https://random-smash.netlify.app/assets/fighters/${CHARACTERS[i].name.replace(/ /g, "_")}.webp" alt="${CHARACTERS[i].name}">`;
   }
 })();
 
