@@ -718,5 +718,14 @@ const CHARACTERS = [
         "name": "Sephiroth",
         "recent" : 0,
         "removed" : false
+    },
+    {
+        "colour": "#7fe9cc",
+        "counter" : 10,
+        "favourite" : false,
+        "id" : 80,
+        "name": "Pyra & Mythra",
+        "recent" : 0,
+        "removed" : false
     }
   ];
